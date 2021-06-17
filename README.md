@@ -8,6 +8,8 @@
 
 `git remote add origin https://github.com/user/repo.git`
 
+`git pull origin branchname --allow-unrelated-histories`
+
 `git checkout -b develop && git add . && git commit -m "Initial commit" && git push origin develop`
 
 `git add . && git commit --amend && git push origin develop`
@@ -47,7 +49,10 @@ _means no changes were made._
 `ng new --help `
 
 `--verbose (-v)`
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4c1ad1d99a60b28456cb61d56f4de95043aa8d8
 _Adds more details to output logging._
 
 `--minimal`
