@@ -1,35 +1,11 @@
-<h2>Clientes</h2>
-<ul class="clientes">
-    <!-- <li *ngFor="let  of clientes"> -->
-    <!-- <li *ngFor="let cliente of clientes" (click)="onSelect(cliente)"> -->
-    <li *ngFor="let cliente of clientes"
-        [class.selected]="cliente === selectedCliente"
-        (click)="onSelect(cliente)">
+<h2>My Cliente</h2>
+
+<ul class="heroes">
+  <li *ngFor="let cliente of clientes"
+    [class.selected]="cliente === selectedCliente"
+    (click)="onSelect(cliente)">
     <span class="badge">{{cliente.id}}</span> {{cliente.name}}
   </li>
 </ul>
 
-<!-- <div>
-    <label for="name">Cliente name: </label>
-    <input id="name" [(ngModel)]="cliente.name" placeholder="name">
-</div> -->
-
-
-<!-- <h2>{{selectedCliente.name | uppercase}} Details</h2>
-<div><span>id: </span>{{selectedCliente.id}}</div>
-<div>
-  <label for="hero-name">Cliente name: </label>
-  <input id="hero-name" [(ngModel)]="selectedCliente.name" placeholder="name">
-</div> -->
-
-<div *ngIf="selectedCliente">
-
-    <h2>{{selectedCliente.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedCliente.id}}</div>
-    <div>
-      <label for="hero-name">Cliente name: </label>
-      <input id="hero-name" [(ngModel)]="selectedCliente.name" placeholder="name">
-    </div>
-  
-  </div>
-
+<app-cliente-detail [cliente]="selectedCliente"></app-cliente-detail>

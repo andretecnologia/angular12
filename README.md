@@ -12,6 +12,8 @@
 
 `git checkout -b develop && git add . && git commit -m "Initial commit" && git push origin develop`
 
+`git add . && git commit -m "Initial commit" && git push origin develop`
+
 `git add . && git commit --amend && git push origin develop`
 
 ### Pre-requisites
@@ -36,6 +38,8 @@ _https://nodejs.org/dist/v14.17.1/node-vxx.xx.x-x64.msi_
 
 `ng g c clientes --type=model --skip-tests`
 
+`ng g c cliente-detail --skip-tests`
+
 `npm install --save angular-material@12.0.3`
 
 `npm install --save @angular/cdk@12.0.3`
@@ -49,10 +53,7 @@ _means no changes were made._
 `ng new --help `
 
 `--verbose (-v)`
-<<<<<<< HEAD
 
-=======
->>>>>>> e4c1ad1d99a60b28456cb61d56f4de95043aa8d8
 _Adds more details to output logging._
 
 `--minimal`

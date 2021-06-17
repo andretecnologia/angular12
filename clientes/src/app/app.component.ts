@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CLIENTES } from './mock-clientes';
 
 @Component({
   selector: 'app-root',
