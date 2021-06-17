@@ -1,6 +1,7 @@
 import { CLIENTES } from './../mock-clientes';
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from './../cliente';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-clientes',
@@ -9,21 +10,21 @@ import { Cliente } from './../cliente';
 })
 export class ClientesComponent implements OnInit {
 
-  // cliente: Cliente = {
-  //   id: 1,
-  //   name: 'Andre'
-  // };
-
-  clientes = CLIENTES;
+  clientes: Cliente[] = [];
   selectedCliente?: Cliente;
 
-  constructor() { }
+  constructor(private clienteService: ClienteService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getClientes();
   }
 
   onSelect(cliente: Cliente): void {
     this.selectedCliente = cliente;
+  }
+
+  getClientes(): void {
+    this.clientes = this.clienteService.getClientes();
   }
 
 }
